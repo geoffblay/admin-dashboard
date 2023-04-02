@@ -84,8 +84,14 @@ body {
         padding: 5px;
     }
 
+    .header-search {
+        display: flex;
+        align-items: center;
+    }
+
     .header-search>img {
         height: 25px;
+        margin-left: 10px;
     }
 
     .header-search>input {
@@ -93,7 +99,9 @@ body {
         border: none;
         border-radius: 20px;
         width: calc(80% - 25px);
-        height: 2em;
+        height: 3em;
+        margin-left: 10px;
+        padding-left: 10px;
     }
 
     .header-search>input, .header-search>img {
