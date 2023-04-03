@@ -177,37 +177,41 @@ body {
     height: calc(100vh - 100px);
     background-color: #bbf7d0;
 
-    display: flex;
-}
-
-.projects {
     border: 2px solid red;
-    width: min(70%, calc(100% - 240px));
+    width: 100%;
 
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 280px));
-    grid-template-rows: repeat(2, minmax(250px, 300px));
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "announcement project project project"
+        "announcement project project project";
 
     z-index: 0;
 
 }
 
-.projects>.project {
+.main-content>.projects {
     border: 2px solid pink;
+    grid-area: project;
 
-    margin: 10px;
-    padding: 5px;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 280px));
+    grid-template-rows: repeat(2, 1fr);
 }
 
-.announcements {
-    border: 2px solid purple;
-    width: max(30%, 240px);
+    .projects>.project {
+        border: 2px solid orange;
+    }
 
-    display: flex;
-    flex-direction: column;
+.main-content>.announcements {
+    border: 2px solid turquoise;
+    grid-area: announcement;
 
-    z-index: 1;
 }
+
 
 
 
