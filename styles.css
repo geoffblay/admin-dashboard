@@ -20,7 +20,7 @@ body {
 
 .sidebar {
     grid-area: sidebar;
-    height: 100vh;
+    height: 100%;
     background-color: #166534;
     padding: 10px;
 }
@@ -176,5 +176,38 @@ body {
     grid-area: main-content;
     height: calc(100vh - 100px);
     background-color: #bbf7d0;
+
+    display: flex;
 }
+
+.projects {
+    border: 2px solid red;
+    width: min(70%, calc(100% - 240px));
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 280px));
+    grid-template-rows: repeat(2, minmax(250px, 300px));
+
+    z-index: 0;
+
+}
+
+.projects>.project {
+    border: 2px solid pink;
+
+    margin: 10px;
+    padding: 5px;
+}
+
+.announcements {
+    border: 2px solid purple;
+    width: max(30%, 240px);
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 1;
+}
+
+
 
