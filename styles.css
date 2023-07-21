@@ -177,7 +177,6 @@ body {
     height: calc(100vh - 100px);
     background-color: #bbf7d0;
 
-    border: 2px solid red;
     width: 100%;
 
     display: grid;
@@ -193,7 +192,6 @@ body {
 
 .projects-container {
     height: inherit;
-    border: 2px solid blue;
 }
 
 .projects-container>h1 {
@@ -203,10 +201,20 @@ body {
     padding-bottom: 0;
 }
 
+.announcements-container {
+    height: inherit;
+}
+
+.announcements-container>h1 {
+    font-weight: 700;
+    font-size: 20px;
+    padding: 15px;
+    padding-bottom: 0;
+}
+
 /* MAIN CONTENT */
 
 .main-content>.projects-container>.projects {
-    border: 2px solid pink;
     padding: 10px;
     grid-area: project;
 
@@ -249,11 +257,36 @@ body {
         right: 10px;
     }
 
-.main-content>.announcements {
-    border: 2px solid turquoise;
+.main-content>.announcements-container>.announcements {
     grid-area: announcement;
 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    padding: 10px;
 }
+
+    .announcements>.announcement {
+        background-color: white;
+        padding: 15px;
+
+        border-radius: 10px;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+        border-left: 5px solid #22c55e;
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .announcement>img {
+        height: 25px;
+    }
+
+    .announcement>h3 {
+        font-weight: 500;
+        font-size: 17px;
+    }
 
 /* 3rd and 6th projects elements disappear if screen width smaller than... */
 @media screen and (max-width: calc(225px + 250px + 280px + 280px + 280px + 50px)) {
